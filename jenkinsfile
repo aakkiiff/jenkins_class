@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Check out source code') {
             steps {
-                echo 'APP V1000'
+                echo 'APP aaaaaaaaaaaaaaaaaaaaaaaaaaaa'
                 echo 'Cleaning workspace'
                 echo 'Pulling code from GitHub'
             }
