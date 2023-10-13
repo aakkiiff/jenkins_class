@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Check out source code') {
             steps {
-                echo 'APP V1000'
                 echo 'Cleaning workspace'
                 echo 'Pulling code from GitHub'
             }
@@ -18,11 +17,18 @@ pipeline {
 
         stage('Docker build + Docker push') {
             steps {
-                echo 'Building Docker file 1'
-                echo 'Building Docker file 2'
-                echo 'Docker login'
-                echo 'Pushing Docker file'
-                echo 'Docker logout'
+                script {
+                    parallel(
+                        "Step 1": {
+                            
+                            echo "1"
+                        },
+                        "Step 2": {
+                            
+                            echo "2"
+                        }
+                    )
+                }
             }
         }
     }
